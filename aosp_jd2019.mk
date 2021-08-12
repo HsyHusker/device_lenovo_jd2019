@@ -19,14 +19,18 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 # Pixel Experience targets
 TARGET_BOOT_ANIMATION_RES := 1080
 
-# Inherit some common PE stuff
+# Inherit some common PPUI stuff
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+# PPUI
+CUSTOM_BUILD_TYPE := OFFICIAL
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_jd2019
 PRODUCT_BRAND := lenovo
 PRODUCT_DEVICE := jd2019
 PRODUCT_MANUFACTURER := lenovo
-PRODUCT_MODEL := Lenovo Z5s
+PRODUCT_MODEL := Z5s
 
 PRODUCT_GMS_CLIENTID_BASE := android-lenovo
